@@ -5,6 +5,7 @@ camera = PiCamera()
 
 camera.hflip=True
 camera.vflip=True
+camera.resolution=(1024,768)
 
 for i in range(5):
 	#sleep(1)
