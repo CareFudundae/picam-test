@@ -20,5 +20,5 @@ system('convert -delay 10 -loop 0 image*.jpg animation.gif')
 #sleep (5)
 #camera.stop_recording()
 
-print time.time() - startTime
+print(time.time() - startTime, ' seconds')
 print('done')
