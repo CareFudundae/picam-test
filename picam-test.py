@@ -1,16 +1,18 @@
 from picamera import PiCamera
 from time import sleep
 from os import system
+from datetime import datetime
+
+startTime=datetime.now()
 camera = PiCamera()
 
 camera.hflip=True
 camera.vflip=True
 camera.resolution=(1024,768)
 
-for i in range(5):
-	#sleep(1)
-	#camera.capture('/home/pi/picam-test/image%s.jpg' % i)
+for i in range(10):
 	camera.capture('image{0:04d}.jpg'.format(i))
+	sleep(.5)
 	
 system('convert -delay 10 -loop 0 image*.jpg animation.gif')
 	
@@ -18,4 +20,5 @@ system('convert -delay 10 -loop 0 image*.jpg animation.gif')
 #sleep (5)
 #camera.stop_recording()
 
+print datetime.now() - startTime
 print('done')
