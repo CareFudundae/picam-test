@@ -1,4 +1,5 @@
 # picam-test
 testing picam and downloading to pi via github
 
-git fetch
+git clone link
+git pull
