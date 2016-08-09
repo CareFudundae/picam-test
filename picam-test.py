@@ -14,6 +14,9 @@ for i in range(10):
 	camera.capture('image{0:04d}.jpg'.format(i))
 	sleep(.5)
 	
+endTime = time.time()
+print(endTime - startTime, ' seconds')
+	
 system('convert -delay 10 -loop 0 image*.jpg animation.gif')
 	
 #camera.start_recording('video.h264')
