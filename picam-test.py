@@ -1,9 +1,9 @@
 from picamera import PiCamera
 from time import sleep
+from time import time
 from os import system
-from datetime import datetime
 
-startTime=datetime.now()
+startTime=time.time()
 camera = PiCamera()
 
 camera.hflip=True
@@ -20,5 +20,5 @@ system('convert -delay 10 -loop 0 image*.jpg animation.gif')
 #sleep (5)
 #camera.stop_recording()
 
-print datetime.now() - startTime
+print time.time() - startTime
 print('done')
