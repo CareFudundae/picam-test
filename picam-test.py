@@ -17,16 +17,16 @@ sleep(2)
 
 #camera capture
 print('capture start')
-for i in range(4):
+for i in range(20):
 	camera.capture('image{0:04d}.jpg'.format(i))
-	sleep(.5)
+	sleep(.25)
 camera.close()
 endTime = time.time()
-print('capture time=',endTime - startTime, 's')
+print('capture end, time elapsed=',endTime - startTime, 's')
 
 
 #convert jpgs to gif
-print('convert to gif')
+print('convert to gif start')
 system('convert -delay 25 -loop 0 image*.jpg animation.gif')
 
 endTime = time.time()
