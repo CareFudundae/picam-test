@@ -6,7 +6,7 @@ camera.hflip=True
 camera.vflip=True
 
 for i in range(5):
-	$sleep(1)
+	#sleep(1)
 	#camera.capture('/home/pi/picam-test/image%s.jpg' % i)
 	camera.capture('image{0:04d}.jpg'.format(i))
 	
