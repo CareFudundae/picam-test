@@ -12,3 +12,5 @@ for i in range(3):
 camera.start_recording('video.h264')
 sleep (5)
 camera.stop_recording()
+
+print("done")
